@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/assets/lib/lightbox/css/lightbox.css" rel="stylesheet" />
+        <link href="/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/assets/lib/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/spinner.css">
+
+        <script src="/assets/lib/jquery-2.0.3.min.js"></script>
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/lib/lightbox/js/lightbox-2.6.min.js"></script>
+        <script src="/assets/js/gallery.js"></script>
+
+    </head>
+    <body>
+        <div id="loading" class="spinner">
+        </div>
+        <div id="gallery" class="container">
+            {{range .}}
+            <ul class="thumbnails row text-center">
+                {{range .}}
+                <li class="span3">
+                <div class="thumbnail">
+                    <a href="{{.Large}}" data-lightbox="wallpaper" title="{{.Title}}">
+                        <img src="{{.Thumbnail}}">
+                        </img>
+                    </a>
+                    <div class="btn-group thumbnail-btn">
+                        <a class="btn btn-inverse btn-mini" type="button" href="{{.Original}}" target="_blank"><i class="icon-share-alt icon-white"></i></a>
+                    </div>
+                </div>
+                </li>
+                {{end}}
+            </ul>
+            {{end}}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+.spinner {
+    position: absolute;
+    background-image:url('/assets/images/spinner.gif');
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    margin-top: -16px;
+    left: 50%;
+    margin-left: -16px;
+}
+
+#gallery {
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
+
+#gallery {
+    display: none;
+}
+
+.thumbnail-btn {
+    float: left;
+    margin-top: -26px;
+    margin-left: 4px;
+}
+
+@media (min-width: 1200px) { 
+    .thumbnail-btn {
+        margin-left: 16px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 400px) { 
+    .thumbnail-btn {
+        margin-top: 4px;
+    }
+}
+
+/* fixes to make lightbox2 compatible with bootstrap */
+.lightbox { max-width: none; }
+.lb-image { max-width: none; }

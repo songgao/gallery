@@ -106,9 +106,9 @@ func buildMux(im *imageManager) (*http.ServeMux, error) {
 			}
 			row := make([]imageItem, rowCount)
 			for j := 0; j < len(row); j++ {
-				row[j].Original = fmt.Sprintf("/original/%s", keys[i+j])
-				row[j].Large = fmt.Sprintf("/large/%s", keys[i+j])
-				row[j].Thumbnail = fmt.Sprintf("/thumbnail/%s", keys[i+j])
+				row[j].Original = fmt.Sprintf("original/%s", keys[i+j])
+				row[j].Large = fmt.Sprintf("large/%s", keys[i+j])
+				row[j].Thumbnail = fmt.Sprintf("thumbnail/%s", keys[i+j])
 				row[j].Title = im.getImageName(keys[i+j])
 			}
 			par = append(par, row)

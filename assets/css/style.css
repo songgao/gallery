@@ -1,6 +1,6 @@
 .spinner {
     position: absolute;
-    background-image:url('/assets/images/spinner.gif');
+    background-image:url('../images/spinner.gif');
     height: 32px;
     width: 32px;
     top: 50%;

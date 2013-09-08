@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"net/http"
+	"runtime"
 	"strings"
 	"time"
 )
@@ -42,6 +43,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	err = http.ListenAndServe(fLAddr, mux)
 	if err != nil {
 		fmt.Println(err)

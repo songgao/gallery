@@ -41,8 +41,8 @@ func initImageManager(imageFolderPath string) (*imageManager, error) {
 }
 
 func (i *imageManager) initGroupCache() {
-	i.large = groupcache.NewGroup("large", 64*1024*1024, widthLimitedImageGetter(1024))
-	i.thumbnail = groupcache.NewGroup("thumbnail", 8*1024*1024, widthLimitedImageGetter(240))
+	i.large = groupcache.NewGroup("large", 128*1024*1024, widthLimitedImageGetter(1024))
+	i.thumbnail = groupcache.NewGroup("thumbnail", 32*1024*1024, widthLimitedImageGetter(240))
 }
 
 func (i *imageManager) getImageKeys() []string {

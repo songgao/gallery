@@ -8,7 +8,7 @@ recursively and indexed. Images are indexed by SHA-1 of [absolute path of the
 image file] and [modification time of the image file]. `gallery` watches the
 image folder and re-indexes when the modification time of the folder changes
 
-There are three sizes for each image: Thumbnail (width = 240px), Large (width = 1024), and Original. Thumbnail and Large are cached in `groupcache`(https://github.com/golang/groupcache) while Original is always loaded from hard drive. 8 MB and 64 MB are allocated for Thumbnails and Larges respectively.
+There are three sizes for each image: Thumbnail (width = 240px), Large (width = 1024), and Original. Thumbnail and Large are cached in `groupcache`(https://github.com/golang/groupcache) while Original is always loaded from hard drive. 32 MB and 128 MB are allocated for Thumbnails and Larges respectively.
 
 ## What does it look like?
 ![screenshots](https://raw.github.com/songgao/gallery/master/contrib/screenshots.jpg)
